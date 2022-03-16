@@ -9,11 +9,11 @@ const Player = ({currentSong, setIsPlaying, isPlaying}) => {
   const playSongHandler = () => {
       if (isPlaying) {
         audioRef.current.pause();
-        setIsPlaying(!setIsPlaying);
+        setIsPlaying(!isPlaying);
       }
       else{
         audioRef.current.play();
-        setIsPlaying(!setIsPlaying);
+        setIsPlaying(!isPlaying);
       }
   }
 
