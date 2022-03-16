@@ -18,7 +18,7 @@ function chillHop() {
             audio : "https://mp3.chillhop.com/serve.php/?mp3=28971",
             colors: ["#FBE5D8","#4C3253"],
             id : uuidv4(),
-            active: fasle,
+            active: false,
         },
          {
             name : "Ending",
@@ -31,3 +31,5 @@ function chillHop() {
         }
     ]
 }
+
+export default chillHop;
