@@ -6,18 +6,21 @@ import "./styles/app.scss";
 // Import Util
 import data from "./util";
 
-import {useState} from "react";
+import { useState } from "react";
 
 function App() {
-
   const [songs, setSongs] = useState(data());
   const [currentSong, setcurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <div className="App">
-      <Song currentSong={currentSong}/>
-      <Player currentSong={currentSong} setIsPlaying={setIsPlaying} isPlaying={isPlaying}/>
+      <Song currentSong={currentSong} />
+      <Player
+        currentSong={currentSong}
+        setIsPlaying={setIsPlaying}
+        isPlaying={isPlaying}
+      />
     </div>
   );
 }
