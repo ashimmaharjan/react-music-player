@@ -5,11 +5,16 @@ import {
   faAngleRight,
   faPause,
 } from "@fortawesome/free-solid-svg-icons";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
-const Player = ({ currentSong, setIsPlaying, isPlaying }) => {
-  // Ref used to select html queries
-  const audioRef = useRef(null);
+const Player = ({
+  currentSong,
+  setIsPlaying,
+  isPlaying,
+  audioRef,
+  songInfo,
+  setSongInfo,
+}) => {
   // Event Handlers
   const playSongHandler = () => {
     if (isPlaying) {
@@ -20,12 +25,6 @@ const Player = ({ currentSong, setIsPlaying, isPlaying }) => {
       setIsPlaying(!isPlaying);
     }
   };
-
-  // State of time
-  const [songInfo, setSongInfo] = useState({
-    currentTime: 0,
-    duration: 0,
-  });
 
   const getTime = (time) => {
     return (
